@@ -5,7 +5,7 @@ const postData = async (path, data) => {
     const response = await fetch(`${BASE_URL}/${path}`, {
       method: "POST",
       body: JSON.stringify(data),
-      headers: { "Content-Type": "application/json",  },
+      headers: { "Content-Type": "application/json" },
     });
     const json = await response.json();
     return json;
@@ -14,4 +14,14 @@ const postData = async (path, data) => {
   }
 };
 
-export { postData };
+const getData = async (path) => {
+  try {
+    const response = await fetch(`${BASE_URL}/${path}`);
+    const json = await response.json();
+    return json;
+  } catch (error) {
+    alert("An error occured!");
+  }
+};
+
+export { postData, getData };
