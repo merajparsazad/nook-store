@@ -22,7 +22,7 @@ const showProducts = (products) => {
             <img alt=${product.title} src=${product.image} />
             <h4>${shortenText(product.title)}</h4>
             <div id="price">
-                <p>${product.price}</p>
+                <p>${product.price} $</p>
                 <button>
                     Buy
                     <i class="fa-solid fa-cart-shopping"></i>

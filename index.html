@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Botostart Store</title>
+    <title>The Nook Store</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
@@ -13,7 +13,11 @@
   </head>
   <body>
     <header>
-      <h3>Store</h3>
+      <h3>The Nook Store</h3>
+      <div id="search">
+        <input type="text" placeholder="Search product..." />
+        <button><i class="fa-solid fa-magnifying-glass"></i></button>
+      </div>
       <div>
         <a href="auth.html" id="login">
           Login
@@ -25,12 +29,8 @@
         </a>
       </div>
     </header>
-    <div id="search">
-      <h1>Shop</h1>
-      <input type="text" placeholder="Search product..." />
-      <button><i class="fa-solid fa-magnifying-glass"></i></button>
-    </div>
-    <div id="container">
+    <h1>The Collection</h1>
+    <main id="container">
       <div id="products"><span id="loader"></span></div>
       <div id="filter">
         <div>
@@ -45,7 +45,7 @@
           <li>Women's Clothing</li>
         </ul>
       </div>
-    </div>
+    </main>
 
     <script type="module" src="./index.js"></script>
   </body>
