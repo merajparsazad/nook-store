@@ -34,7 +34,7 @@ header a:hover {
 }
 
 #search input {
-  width: 600px;
+  width: 500px;
   padding: 10px;
   border: silver 1px solid;
   border-radius: 5px;
@@ -58,13 +58,11 @@ header a:hover {
 }
 
 #search button:hover {
-  background-color: var(--color-secondary);
-  color: var(--color-primary);
+  opacity: 80%;
 }
 
 h1 {
-  max-width: 1200px;
-  margin: 0 auto;
+  margin-left: 20px;
 }
 
 #container {
@@ -111,16 +109,17 @@ h1 {
 }
 
 #products {
+  margin-left: 20px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  gap: 20px;
+  justify-content: flex-start;
   width: 100%;
 }
 
 #products > div {
   background-color: #fff;
   width: 250px;
-  margin-bottom: 20px;
   padding: 15px;
   border-radius: 10px;
   position: relative;
@@ -182,4 +181,136 @@ h4 {
   padding: 5px;
   border-radius: 5px;
   font-size: 0.9rem;
+}
+
+/* Mobile */
+@media (max-width: 800px) {
+  header {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 15px;
+    margin-bottom: 30px;
+  }
+
+  header h3 {
+    float: left;
+    order: 1;
+    font-size: 1.3rem;
+    margin-top: -30px;
+  }
+
+  header a {
+    float: right;
+    order: 2;
+    margin-top: 10px;
+  }
+
+  #search {
+    order: 3;
+    display: flex;
+    position: relative;
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+  #search input {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  #search button {
+    width: 10%;
+    position: absolute;
+    right: 0;
+    top: 1px;
+  }
+
+  h1 {
+    position: absolute;
+    top: 500px;
+    left: 10px;
+  }
+
+  #container {
+    flex-direction: column;
+    margin: 20px 10px;
+  }
+
+  #filter {
+    order: 1;
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 20px;
+  }
+
+  #filter div {
+    width: 100%;
+  }
+
+  #products {
+    margin-top: 100px;
+    order: 2;
+    justify-content: center;
+  }
+
+  #products > div {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto 20px;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    margin: 30px 0 20px;
+  }
+}
+
+/* Tablet */
+@media (min-width: 801px) and (max-width: 1090px) {
+  #search {
+    width: 50%;
+    flex-grow: grow;
+    display: flex;
+    gap: 5px;
+  }
+
+  h1 {
+    position: absolute;
+    top: 500px;
+    left: 10px;
+  }
+
+  #container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 20px 10px;
+  }
+
+  #filter {
+    order: 1;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  #filter div {
+    width: 100%;
+  }
+
+  #products {
+    order: 2;
+    margin-top: 120px;
+    justify-content: flex-start;
+  }
+
+  #products > div {
+    width: calc(50% - 20px);
+    margin-bottom: 20px;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    margin: 30px 0 20px;
+  }
 }

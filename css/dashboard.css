@@ -2,6 +2,7 @@ header {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 30px;
   margin-bottom: 30px;
   background-color: #e7e7ff;
@@ -49,16 +50,18 @@ main {
 
 #card {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 20px;
   align-items: center;
   padding: 30px 20px;
   background-color: #fff;
-  margin-bottom: 50px;
   border-radius: 10px;
+  margin: 0 10px;
+  margin-bottom: 50px;
 }
 
 h1 {
-  margin: 50px 0 40px;
+  margin: 50px 10px 30px;
 }
 
 #card h3 {
@@ -76,7 +79,7 @@ h1 {
 #card div {
   display: flex;
   flex-direction: column;
-  height: 90px;
+  max-height: 90px;
   background-color: var(--color-background);
   border-radius: 10px;
   padding: 15px;
@@ -87,6 +90,11 @@ h1 {
   font-weight: 600;
   font-size: 1.1rem;
   margin-bottom: 20px;
+  text-wrap: nowrap;
+}
+
+#card span {
+  text-wrap: wrap;
 }
 
 #card i {
@@ -118,6 +126,7 @@ h1 {
   display: none;
   justify-content: center;
   align-items: center;
+  overflow-y: auto;
 }
 #modal.show {
   display: flex;
@@ -223,4 +232,69 @@ h1 {
 
 #order button:hover {
   opacity: 80%;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  header {
+    padding: 20px;
+  }
+
+  header h3 {
+    font-size: 1.3rem;
+  }
+
+  header a,
+  header button {
+    margin-left: 10px;
+    text-align: center;
+  }
+
+  #modal {
+    padding: 10px;
+    align-items: flex-start;
+  }
+
+  #card {
+    flex-wrap: wrap;
+    padding: 20px;
+  }
+
+  #cart-products {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .modal-content {
+    min-width: 90%;
+    max-width: 95%;
+    max-height: auto;
+    padding: 15px;
+  }
+}
+
+/* Tablet */
+@media (min-width: 701px) and (max-width: 1024px) {
+  header {
+    padding: 20px;
+  }
+
+  header h3 {
+    font-size: 1.5rem;
+  }
+
+  header a,
+  header button {
+    margin-left: 10px;
+  }
+
+  #card {
+    flex-wrap: wrap;
+  }
+
+  #cart-products {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    flex-wrap: wrap;
+  }
 }
